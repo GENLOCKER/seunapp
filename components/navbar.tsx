@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { navLinks } from "@/libs/constants";
 import Image from "next/image";
 import Link from "next/link";

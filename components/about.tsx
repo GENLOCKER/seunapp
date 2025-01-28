@@ -36,13 +36,13 @@ const About = () => {
         {/* Text Content */}
         <div className="flex flex-col gap-6 text-justify sm:text-left w-full md:w-7/12">
           <p className="text-[18px] font-sans">
-            I'm competent in utilizing technologies such as HTML, CSS,
+            I&aposm competent in utilizing technologies such as HTML, CSS,
             JavaScript, and TypeScript with expertise in modern frameworks such
             as ReactJS, NextJS, and other technologies including Redux, React
             Query, and Cypress.
           </p>
           <p className="text-[18px] font-sans">
-            Here are a few technologies I've been working with recently:
+            Here are a few technologies I&aposve been working with recently:
           </p>
 
           {/* Technologies Grid */}
