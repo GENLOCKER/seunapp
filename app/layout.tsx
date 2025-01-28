@@ -33,26 +33,28 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Main Container */}
-          <div className="relative min-h-screen flex flex-col md:flex-row">
+          <div className="w-full min-h-screen max-w-[1600px] mx-auto bg-white dark:bg-secondary relative">
             {/* Sidebar */}
-            <div className="hidden md:block fixed top-0 left-0 h-full w-64 bg-white dark:bg-navy">
+            <div className="hidden lg:block fixed left-0 bottom-0 bg-white dark:bg-navy">
               <Sidebar />
             </div>
 
-            {/* Main Content */}
-            <div className="flex-1 md:pl-64">
-              {/* Navbar */}
-              <Navbar />
-
-              {/* Page Content */}
-              <main className="px-4 sm:px-8 lg:px-2">
-                <div className="pt-24 pb-8">{children}</div>
-              </main>
+            {/* Email Sidebar */}
+            <div className="hidden lg:block fixed right-0 bottom-0 bg-white dark:bg-navy">
+              <EmailSidebar />
             </div>
 
-            {/* Email Sidebar */}
-            <div className="hidden md:block fixed top-0 right-0 h-full w-16 bg-white dark:bg-navy">
-              <EmailSidebar />
+            {/* Main Content */}
+            <div className="flex flex-col min-h-screen">
+              {/* Navbar */}
+              <div className="sticky top-0 bg-white dark:bg-secondary z-[9999]">
+                <Navbar />
+              </div>
+
+              {/* Page Content */}
+              <main className="flex-grow px-4 sm:px-8 lg:px-2 lg:pl-[250px] lg:pr-[250px]">
+                <div className="pt-24 pb-8">{children}</div>
+              </main>
             </div>
           </div>
         </ThemeProvider>

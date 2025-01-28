@@ -1,20 +1,24 @@
 // pages/index.tsx
+import About from "@/components/about";
+import Contact from "@/components/contact";
+import HomePage from "@/components/home";
+import Portfolio from "@/components/portfolio";
 import Section from "@/components/Section";
 
 export default function Home() {
   return (
-    <div>
-      <Section id="home" title="Home">
-        <p>Welcome to my portfolio!</p>
+    <div className="space-y-20  mt-20">
+      <Section id="home" className="text-center sm:text-left">
+        <HomePage />
       </Section>
-      <Section id="about" title="About">
-        <p>About me content goes here.</p>
+      <Section id="about">
+        <About />
       </Section>
-      <Section id="projects" title="Projects">
-        <p>Projects content goes here.</p>
+      <Section id="projects">
+        <Portfolio />
       </Section>
-      <Section id="contact" title="Contact">
-        <p>Contact information goes here.</p>
+      <Section id="contact">
+        <Contact />
       </Section>
     </div>
   );

@@ -3,10 +3,10 @@ import { NavItem } from "@/types";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export const navLinks: NavItem[] = [
-  { href: "/about", label: "01. About" },
-  { href: "/experience", label: "02. Experience" },
-  { href: "/portfolio", label: "03. Portfolio" },
-  { href: "/contact", label: "04. Contact" },
+  { href: "/about", number: "01", label: "About" },
+  { href: "/experience", number: "02", label: "Experience" },
+  { href: "/portfolio", number: "03", label: "Portfolio" },
+  { href: "/contact", number: "04", label: "Contact" },
 ];
 
 export const socialLinks = [

@@ -2,14 +2,23 @@ import Link from "next/link";
 
 export default function EmailSidebar() {
   return (
-    <div className="hidden lg:flex fixed bottom-0 right-12 flex-col items-center">
+    <div className="hidden lg:flex fixed bottom-0 right-12 flex-col items-center gap-8">
+      {/* Email Link */}
       <Link
         href="mailto:ogunrukuseun@gmail.com"
-        className="vertical-text mb-8 text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400"
+        className="text-secondary dark:text-info font-mono hover:text-green-700 dark:hover:text-primary hover:-translate-y-[2px] transition-transform"
+        title="Email"
+        style={{
+          writingMode: "vertical-lr",
+          textOrientation: "sideways",
+          letterSpacing: "2px",
+        }}
       >
-        Ogunrukuseun@gmail.com
+        ogunrukuseun@gmail.com
       </Link>
-      <div className="h-24 w-px bg-gray-300 dark:bg-gray-700" />
+
+      {/* Line Divider */}
+      <div className="w-px h-24 bg-secondary dark:bg-info opacity-50"></div>
     </div>
   );
 }
