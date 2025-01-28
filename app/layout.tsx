@@ -33,14 +33,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Main Container */}
-          <div className="relative min-h-screen flex">
+          <div className="relative min-h-screen flex flex-col md:flex-row">
             {/* Sidebar */}
-            <div className="fixed top-0 left-0 h-full w-64  bg-white dark:bg-navy">
+            <div className="hidden md:block fixed top-0 left-0 h-full w-64 bg-white dark:bg-navy">
               <Sidebar />
             </div>
 
             {/* Main Content */}
-            <div className="flex-1 pl-64">
+            <div className="flex-1 md:pl-64">
               {/* Navbar */}
               <Navbar />
 
@@ -51,7 +51,7 @@ export default function RootLayout({
             </div>
 
             {/* Email Sidebar */}
-            <div className="fixed top-0 right-0 h-full w-16  bg-white dark:bg-navy">
+            <div className="hidden md:block fixed top-0 right-0 h-full w-16 bg-white dark:bg-navy">
               <EmailSidebar />
             </div>
           </div>
