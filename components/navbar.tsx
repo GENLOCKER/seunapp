@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="flex items-center">
         <Link href="/" className="mr-4">
           <Image
-            src="/logo.svg"
+            src="/logo-icon.svg"
             alt="Logo"
             width={32}
             height={36.95}
@@ -71,7 +71,7 @@ export default function Navbar() {
         </nav>
 
         {/* Theme Toggle */}
-        <label className="swap swap-rotate text-black dark:text-white lg:text-info mx-4">
+        <label className="swap swap-rotate text-black dark:text-white lg:text-black mx-4">
           <input
             type="checkbox"
             className="theme-controller"
