@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 interface Project {
@@ -45,9 +48,13 @@ const Portfolio = () => {
       {/* Project Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="flex flex-col gap-4 p-6 rounded-lg bg-green-50 dark:bg-navy border border-secondary/10 dark:border-info/10 hover:-translate-y-1 transition-transform duration-200"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
           >
             <div className="flex items-center justify-between">
               <span className="text-green-700 dark:text-primary text-2xl">
@@ -89,7 +96,7 @@ const Portfolio = () => {
                 <li key={i}>{t}</li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
