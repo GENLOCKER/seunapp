@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 interface Role {
   title: string;
@@ -45,7 +48,14 @@ const Experience = () => {
       {/* Timeline */}
       <div className="flex flex-col gap-10">
         {roles.map((role, index) => (
-          <div key={index} className="flex gap-6">
+          <motion.div
+            key={index}
+            className="flex gap-6"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+          >
             <div className="hidden sm:flex flex-col items-center">
               <span className="w-3 h-3 rounded-full bg-green-700 dark:bg-primary" />
               {index < roles.length - 1 && (
@@ -78,7 +88,7 @@ const Experience = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

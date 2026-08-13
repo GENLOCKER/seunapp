@@ -5,6 +5,9 @@ import { FiGithub } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
 
+export const SITE_URL = "https://seunapp.vercel.app";
+export const SITE_NAME = "Ogunruku Seun";
+
 export const navLinks: NavItem[] = [
   { href: "about", number: "01", label: "About" },
   { href: "experience", number: "02", label: "Experience" },
@@ -14,7 +17,11 @@ export const navLinks: NavItem[] = [
 
 export const socialLinks = [
   { href: "https://github.com/GENLOCKER", icon: FiGithub, label: "GitHub" },
-  { href: "https://linkedin.com", icon: SlSocialLinkedin, label: "LinkedIn" },
+  {
+    href: "https://www.linkedin.com/in/ogunruku-oluwaseun-0a2868199/",
+    icon: SlSocialLinkedin,
+    label: "LinkedIn",
+  },
   { href: "https://x.com/seunruku", icon: FaXTwitter, label: "Twitter" },
   {
     href: "https://www.instagram.com/ruku001/?hl=en",
