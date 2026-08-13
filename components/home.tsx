@@ -33,7 +33,7 @@ const HomePage = () => {
           transform: "none",
         }}
       >
-        <Link href="/#/contact">
+        <Link href="/#contact">
           <button className="btn px-3 md:px-6 btn-outline border-green-700 dark:border-primary hover:border-primary hover:bg-accent hover:text-primary rounded text-[15px] font-mono font-normal capitalize text-green-700 dark:text-primary">
             Get in Touch
           </button>

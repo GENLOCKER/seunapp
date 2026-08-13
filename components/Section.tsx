@@ -1,5 +1,6 @@
 // components/Section.tsx
 import React from "react";
+import { cn } from "@/libs/utils";
 
 // components/Section.tsx
 interface SectionProps {
@@ -10,7 +11,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ id, children, className }) => {
   return (
-    <section id={id} className={className}>
+    <section id={id} className={cn("scroll-mt-28", className)}>
       <div>{children}</div>
     </section>
   );
