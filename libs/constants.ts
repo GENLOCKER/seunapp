@@ -6,10 +6,10 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const navLinks: NavItem[] = [
-  { href: "/about", number: "01", label: "About" },
-  { href: "/experience", number: "02", label: "Experience" },
-  { href: "/portfolio", number: "03", label: "Portfolio" },
-  { href: "/contact", number: "04", label: "Contact" },
+  { href: "about", number: "01", label: "About" },
+  { href: "experience", number: "02", label: "Experience" },
+  { href: "projects", number: "03", label: "Portfolio" },
+  { href: "contact", number: "04", label: "Contact" },
 ];
 
 export const socialLinks = [

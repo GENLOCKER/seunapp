@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const About = () => {
@@ -42,7 +41,7 @@ const About = () => {
             Query, and Cypress.
           </p>
           <p className="text-[18px] font-sans">
-            Here are a few technologies I&aposve been working with recently:
+            Here are a few technologies I&apos;ve been working with recently:
           </p>
 
           {/* Technologies Grid */}
@@ -61,14 +60,13 @@ const About = () => {
         </div>
 
         {/* Image Container */}
-        <div className="w-full md:w-5/12 bg-green-200 dark:bg-primary rounded-lg relative h-[500px] mr-0 md:mr-8">
-          <Image
-            src="/feji.jpeg"
-            alt="Fejiro Ogunje"
-            className="w-full rounded-lg object-cover h-full object-top"
-            width={500}
-            height={500}
-          />
+        <div className="w-full md:w-5/12 bg-green-200 dark:bg-primary rounded-lg relative h-[500px] mr-0 md:mr-8 flex items-center justify-center overflow-hidden">
+          <span
+            aria-hidden
+            className="font-sans font-extrabold text-secondary dark:text-navy text-[120px] leading-none select-none opacity-70"
+          >
+            OS
+          </span>
         </div>
       </div>
     </div>

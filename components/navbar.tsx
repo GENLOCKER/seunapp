@@ -4,22 +4,18 @@ import { useState, useEffect } from "react";
 import { navLinks } from "@/libs/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const handleThemeToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const isChecked = e.target.checked;
-    setIsDarkMode(isChecked);
-    if (isChecked) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    setTheme(e.target.checked ? "dark" : "light");
   };
 
   useEffect(() => {
@@ -34,9 +30,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const darkMode = document.documentElement.classList.contains("dark");
-    setIsDarkMode(darkMode);
+    setMounted(true);
   }, []);
+
+  const isDarkMode = mounted && resolvedTheme === "dark";
 
   return (
     <nav className="flex justify-between items-center font-mono w-full py-6 px-4 md:max-w-[90%] lg:max-w-full mx-auto lg:px-14 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-navy">
