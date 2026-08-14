@@ -1,18 +1,38 @@
 import React from "react";
 
-const About = () => {
-  const technologies = [
-    [
-      "HTML",
-      "CSS",
-      "JavaScript",
+const technologies = [
+  {
+    category: "Frontend",
+    items: [
+      "React.js",
+      "React Native",
+      "Next.js",
       "TypeScript",
-      "React Query",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Chakra UI",
+      "NextUI",
       "Redux",
-      "Cypress",
+      "WebSockets",
     ],
-    ["Tailwind", "ReactJS", "NextJS", "React Native"],
-  ];
+  },
+  {
+    category: "AI / LLM",
+    items: ["OpenAI API", "Prompt Engineering", "RAG", "LLM-powered UI"],
+  },
+  {
+    category: "Testing & CI",
+    items: ["Cypress", "CircleCI", "CI/CD", "AWS S3"],
+  },
+  {
+    category: "Tools",
+    items: ["Git", "PWA", "React Query", "Google Maps API"],
+  },
+];
+
+const About = () => {
 
   return (
     <div>
@@ -35,25 +55,33 @@ const About = () => {
         {/* Text Content */}
         <div className="flex flex-col gap-6 text-justify sm:text-left w-full md:w-7/12">
           <p className="text-[18px] font-sans">
-            I&apos;m competent in utilizing technologies such as HTML, CSS,
-            JavaScript, and TypeScript with expertise in modern frameworks such
-            as ReactJS, NextJS, and other technologies including Redux, React
-            Query, and Cypress.
+            I&apos;m a Frontend Engineer building enterprise web and mobile
+            products with React, Next.js, and TypeScript. I focus on
+            translating complex workflows into clean, reusable interfaces,
+            integrating REST APIs, and shipping across both React/Next.js and
+            React Native/Expo.
           </p>
           <p className="text-[18px] font-sans">
             Here are a few technologies I&apos;ve been working with recently:
           </p>
 
-          {/* Technologies Grid */}
-          <div className="flex gap-10 font-sans">
-            {technologies.map((group, index) => (
-              <div key={index} className="flex flex-col gap-2">
-                {group.map((tech, i) => (
-                  <div key={i} className="flex gap-4">
-                    <span className="text-green-700 dark:text-primary">-</span>
-                    <p>{tech}</p>
-                  </div>
-                ))}
+          {/* Technologies */}
+          <div className="flex flex-col gap-5">
+            {technologies.map((group) => (
+              <div key={group.category} className="flex flex-col gap-2">
+                <h3 className="text-[13px] font-mono uppercase tracking-wide text-secondary dark:text-info opacity-60">
+                  {group.category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-secondary/15 dark:border-info/15 bg-secondary/5 dark:bg-info/5 px-3 py-1.5 text-[12px] font-mono text-secondary/80 dark:text-info/80"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
