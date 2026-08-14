@@ -18,7 +18,7 @@ export const navLinks: NavItem[] = [
 export const socialLinks = [
   { href: "https://github.com/GENLOCKER", icon: FiGithub, label: "GitHub" },
   {
-    href: "https://www.linkedin.com/in/ogunruku-oluwaseun-0a2868199/",
+    href: "https://www.linkedin.com/in/ogunrukuoluwaseun/",
     icon: SlSocialLinkedin,
     label: "LinkedIn",
   },
