@@ -1,10 +1,18 @@
 // components/Sidebar.tsx
+"use client";
+
+import { motion } from "framer-motion";
 import { socialLinks } from "@/libs/constants";
 import { SocialIcon } from "./SocialIcon";
 
 export default function Sidebar() {
   return (
-    <div className="hidden lg:block fixed left-14 bottom-0">
+    <motion.div
+      className="hidden lg:block fixed left-14 bottom-0"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
+    >
       <div className="flex flex-col items-center gap-8">
         {socialLinks.map(({ href, icon: Icon, label }) => (
           <SocialIcon
@@ -17,6 +25,6 @@ export default function Sidebar() {
         ))}
         <div className="h-24 w-px bg-gray-300 dark:bg-gray-700" />
       </div>
-    </div>
+    </motion.div>
   );
 }
