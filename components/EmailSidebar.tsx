@@ -1,8 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function EmailSidebar() {
   return (
-    <div className="hidden lg:flex fixed bottom-0 right-12 flex-col items-center gap-8">
+    <motion.div
+      className="hidden lg:flex fixed bottom-0 right-12 flex-col items-center gap-8"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+    >
       {/* Email Link */}
       <Link
         href="mailto:ogunrukuseun@gmail.com"
@@ -19,6 +27,6 @@ export default function EmailSidebar() {
 
       {/* Line Divider */}
       <div className="w-px h-24 bg-secondary dark:bg-info opacity-50"></div>
-    </div>
+    </motion.div>
   );
 }
